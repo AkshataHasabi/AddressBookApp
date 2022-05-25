@@ -26,7 +26,6 @@ public class AddressbookService implements IAddressbookService {
         addressbookDataList.add(addressbookData);
         return addressbookData;
     }
-
     @Override
     public AddressbookData updateAddressbookData(int id,AddressbookDTO addressbookDTO) {
         AddressbookData addressbookData=this.getAddressbookDataById(id);
@@ -41,7 +40,6 @@ public class AddressbookService implements IAddressbookService {
         addressbookDataList.set(id-1,addressbookData);
         return addressbookData;
     }
-
     @Override
     public void deleteAddressbookData(int id) {
         addressbookDataList.remove(id-1);
