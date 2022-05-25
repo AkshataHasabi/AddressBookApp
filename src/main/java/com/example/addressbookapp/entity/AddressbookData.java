@@ -1,6 +1,9 @@
-package com.example.addressbookapp.dto;
+package com.example.addressbookapp.entity;
 
-public class AddressbookDTO {
+import com.example.addressbookapp.dto.AddressbookDTO;
+
+public class AddressbookData {
+    private int id;
     private String fName;
     private String lName;
     private String phoneNumber;
@@ -9,6 +12,14 @@ public class AddressbookDTO {
     private String city;
     private String state;
     private int zipCode;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getfName() {
         return fName;
@@ -74,28 +85,18 @@ public class AddressbookDTO {
         this.zipCode = zipCode;
     }
 
-    public AddressbookDTO(String fName, String lName, String phoneNumber, String email, String address, String city, String state, int zipCode) {
-        this.fName = fName;
-        this.lName = lName;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zipCode = zipCode;
+    public AddressbookData(int id, AddressbookDTO addressbookDTO) {
+        this.id = id;
+        this.fName = addressbookDTO.getfName();
+        this.lName = addressbookDTO.getlName();
+        this.phoneNumber = addressbookDTO.getPhoneNumber();
+        this.email = addressbookDTO.getEmail();
+        this.address = addressbookDTO.getAddress();
+        this.city = addressbookDTO.getCity();
+        this.state = addressbookDTO.getState();
+        this.zipCode = addressbookDTO.getZipCode();
     }
 
-    @Override
-    public String toString() {
-        return "AddressbookDTO{" +
-                "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zipCode=" + zipCode +
-                '}';
+    public AddressbookData() {
     }
 }
