@@ -1,9 +1,9 @@
-package com.example.addressbookapp.controller;
+package com.example.addressbook.controller;
 
-import com.example.addressbookapp.dto.AddressbookDTO;
-import com.example.addressbookapp.dto.ResponseDTO;
-import com.example.addressbookapp.entity.AddressbookData;
-import com.example.addressbookapp.service.IAddressbookService;
+import com.example.addressbook.dto.AddressbookDTO;
+import com.example.addressbook.dto.ResponseDTO;
+import com.example.addressbook.entity.AddressbookData;
+import com.example.addressbook.service.IAddressbookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

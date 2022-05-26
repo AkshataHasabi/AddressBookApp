@@ -1,4 +1,4 @@
-package com.example.addressbookapp;
+package com.example.addressbook;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -7,10 +7,11 @@ import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 @Slf4j
-public class AddressBookAppApplication {
+public class AddressBookApplication {
     public static void main(String[] args) {
         System.out.println("welcome to AddressBookApp development");
-        ApplicationContext context=SpringApplication.run(AddressBookAppApplication.class, args);
+        ApplicationContext context=SpringApplication.run(AddressBookApplication.class, args);
         log.info("Addressbook started {} environment",context.getEnvironment().getProperty("environment"));
+        log.info("Addressbook DB user is {}",context.getEnvironment().getProperty("spring.database.username"));
     }
 }
