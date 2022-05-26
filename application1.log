@@ -1,0 +1,12 @@
+2022-05-26 12:07:51.452 [restartedMain] [c.e.a.AddressBookAppApplication:55] Starting AddressBookAppApplication using Java 17.0.3.1 on LAPTOP-3DLLB35C with PID 6748 (C:\Users\Asus\IdeaProjects\AddressBookApp\target\classes started by Asus in C:\Users\Asus\IdeaProjects\AddressBookApp)
+2022-05-26 12:07:51.453 [restartedMain] [c.e.a.AddressBookAppApplication:56] Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-26 12:07:51.454 [restartedMain] [c.e.a.AddressBookAppApplication:640] The following 1 profile is active: "prod"
+2022-05-26 12:07:53.538 [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 12:07:53.862 [restartedMain] [c.e.a.AddressBookAppApplication:61] Started AddressBookAppApplication in 2.722 seconds (JVM running for 3.328)
+2022-05-26 12:07:53.865 [restartedMain] [c.e.a.AddressBookAppApplication:14] Addressbook started PROD environment
+2022-05-26 12:08:13.519 [restartedMain] [c.e.a.AddressBookAppApplication:55] Starting AddressBookAppApplication using Java 17.0.3.1 on LAPTOP-3DLLB35C with PID 16796 (C:\Users\Asus\IdeaProjects\AddressBookApp\target\classes started by Asus in C:\Users\Asus\IdeaProjects\AddressBookApp)
+2022-05-26 12:08:13.520 [restartedMain] [c.e.a.AddressBookAppApplication:56] Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-26 12:08:13.521 [restartedMain] [c.e.a.AddressBookAppApplication:640] The following 1 profile is active: "prod"
+2022-05-26 12:08:15.995 [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 12:08:16.314 [restartedMain] [c.e.a.AddressBookAppApplication:61] Started AddressBookAppApplication in 3.14 seconds (JVM running for 3.881)
+2022-05-26 12:08:16.317 [restartedMain] [c.e.a.AddressBookAppApplication:14] Addressbook started PROD environment
