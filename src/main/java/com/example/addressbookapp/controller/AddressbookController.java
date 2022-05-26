@@ -28,7 +28,7 @@ public class AddressbookController {
 
     //get addressbook details by id
     @GetMapping("/{id}")
-    public ResponseEntity<ResponseDTO> getAddressbookData(@PathVariable int id){
+    public ResponseEntity<ResponseDTO> getAddressbookDataById(@PathVariable int id){
         AddressbookData addressbookData=iAddressbookService.getAddressbookDataById(id);
         ResponseDTO responseDTO=new ResponseDTO("Get call Success",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);

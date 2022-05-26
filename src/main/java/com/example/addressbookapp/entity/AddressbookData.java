@@ -13,7 +13,7 @@ public class AddressbookData {
     private String address;
     private String city;
     private String state;
-    private int zipCode;
+    private String zipCode;
     public AddressbookData(int id, AddressbookDTO addressbookDTO) {
         this.id = id;
         this.fName = addressbookDTO.getFName();
