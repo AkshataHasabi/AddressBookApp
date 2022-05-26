@@ -40,7 +40,7 @@ public class AddressbookService implements IAddressbookService {
         addressbookData.setCity(addressbookData.getCity());
         addressbookData.setState(addressbookData.getState());
         addressbookData.setZipCode(addressbookDTO.getZipCode());
-        addressbookData.setBookName(addressbookDTO.getBookName());
+        addressbookData.setCountry(addressbookDTO.getCountry());
         addressbookDataList.set(id-1,addressbookData);
         return addressbookData;
     }

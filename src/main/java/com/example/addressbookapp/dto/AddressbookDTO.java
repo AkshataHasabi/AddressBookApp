@@ -25,6 +25,6 @@ public class AddressbookDTO {
     public String state;
     @Pattern(regexp = "^[1-9]{1}[0-9]{2}\\-{0,1}\\s{0,1}[0-9]{3}$", message = "zipcode pattern is invalid")
     public String zipCode;
-    @NotBlank(message = "book name should not be empty")
-    public String bookName;
+    @NotBlank(message = "country name should not be empty")
+    public String country;
 }
