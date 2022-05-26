@@ -1,7 +1,7 @@
-package com.example.addressbookapp.service;
+package com.example.addressbook.service;
 
-import com.example.addressbookapp.dto.AddressbookDTO;
-import com.example.addressbookapp.entity.AddressbookData;
+import com.example.addressbook.dto.AddressbookDTO;
+import com.example.addressbook.entity.AddressbookData;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

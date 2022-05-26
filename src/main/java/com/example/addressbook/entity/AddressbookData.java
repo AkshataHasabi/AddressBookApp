@@ -1,6 +1,6 @@
-package com.example.addressbookapp.entity;
+package com.example.addressbook.entity;
 
-import com.example.addressbookapp.dto.AddressbookDTO;
+import com.example.addressbook.dto.AddressbookDTO;
 import lombok.Data;
 
 @Data
