@@ -2,6 +2,7 @@ package com.example.addressbookapp.service;
 
 import com.example.addressbookapp.dto.AddressbookDTO;
 import com.example.addressbookapp.entity.AddressbookData;
+import com.example.addressbookapp.exception.AddressbookException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -17,7 +18,8 @@ public class AddressbookService implements IAddressbookService {
 
     @Override
     public AddressbookData getAddressbookDataById(int id) {
-        return addressbookDataList.get(id-1);
+        return addressbookDataList.stream().filter(addressbookData -> addressbookData.getId() == id)
+                .findFirst().orElseThrow(()-> new AddressbookException("Exception Not Found!!"));
     }
 
     @Override
