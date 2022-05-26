@@ -3,10 +3,19 @@ package com.example.addressbookapp.entity;
 import com.example.addressbookapp.dto.AddressbookDTO;
 import lombok.Data;
 
+import javax.persistence.*;
+
+@Entity
 @Data
+@Table(name = "addressbookDetails")
 public class AddressbookData {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "addressbook_id")
     private int id;
+    @Column(name = "firstName")
     private String fName;
+    @Column(name = "lastName")
     private String lName;
     private String phoneNumber;
     private String email;
