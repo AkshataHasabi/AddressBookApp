@@ -30,7 +30,15 @@ public class AddressbookController {
     @GetMapping("/{id}")
     public ResponseEntity<ResponseDTO> getAddressbookDataById(@PathVariable int id){
         AddressbookData addressbookData=iAddressbookService.getAddressbookDataById(id);
-        ResponseDTO responseDTO=new ResponseDTO("Get call Success",addressbookData);
+        ResponseDTO responseDTO=new ResponseDTO("Get call Success for id successfull",addressbookData);
+        return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+    }
+
+    //get addressbook details by their cityname
+    @GetMapping("city/{city}")
+    public ResponseEntity<ResponseDTO> getAddressbookDataByCity(@PathVariable String city){
+       List<AddressbookData> addressbookData=iAddressbookService.getAddressbookByCity(city);
+        ResponseDTO responseDTO=new ResponseDTO("Get call Success  for name successfull",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 
@@ -43,7 +51,7 @@ public class AddressbookController {
     }
 
     //update addressbook details
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     public ResponseEntity<ResponseDTO> updateAddressbookData(@PathVariable int id,@Valid @RequestBody AddressbookDTO addressbookDTO){
         AddressbookData addressbookData=iAddressbookService.updateAddressbookData(id,addressbookDTO);
         ResponseDTO responseDTO=new ResponseDTO("updated Addressbook data succesfully",addressbookData);
