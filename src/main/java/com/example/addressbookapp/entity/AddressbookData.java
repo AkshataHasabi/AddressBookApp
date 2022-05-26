@@ -14,6 +14,7 @@ public class AddressbookData {
     private String city;
     private String state;
     private String zipCode;
+    private String bookName;
     public AddressbookData(int id, AddressbookDTO addressbookDTO) {
         this.id = id;
         this.fName = addressbookDTO.getFName();
@@ -24,6 +25,7 @@ public class AddressbookData {
         this.city = addressbookDTO.getCity();
         this.state = addressbookDTO.getState();
         this.zipCode = addressbookDTO.getZipCode();
+        this.bookName=addressbookDTO.getBookName();
     }
 
     public AddressbookData() {
