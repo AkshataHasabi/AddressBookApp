@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -35,15 +36,15 @@ public class AddressbookController {
 
     //create addressbook details
     @PostMapping("/create")
-    public ResponseEntity<ResponseDTO> addAddressbookData(@RequestBody AddressbookDTO addressbookDTO){
+    public ResponseEntity<ResponseDTO> addAddressbookData(@Valid @RequestBody AddressbookDTO addressbookDTO){
         AddressbookData addressbookData=iAddressbookService.createAddressbookData(addressbookDTO);
         ResponseDTO responseDTO=new ResponseDTO("created Addressbook data succesfully",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 
     //update addressbook details
-    @PutMapping("/update")
-    public ResponseEntity<ResponseDTO> updateAddressbookData(@PathVariable int id, @RequestBody AddressbookDTO addressbookDTO){
+    @PutMapping("/update/{id}")
+    public ResponseEntity<ResponseDTO> updateAddressbookData(@PathVariable int id, @Valid @RequestBody AddressbookDTO addressbookDTO){
         AddressbookData addressbookData=iAddressbookService.updateAddressbookData(id,addressbookDTO);
         ResponseDTO responseDTO=new ResponseDTO("updated Addressbook data succesfully",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
