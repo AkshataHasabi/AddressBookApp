@@ -1724,3 +1724,9 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 2022-05-26 14:29:13.814  WARN 9444 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2022-05-26 14:29:14.072  INFO 9444 --- [restartedMain] c.e.a.AddressBookAppApplication          : Started AddressBookAppApplication in 1.918 seconds (JVM running for 2.358)
 2022-05-26 14:29:14.072  INFO 9444 --- [restartedMain] c.e.a.AddressBookAppApplication          : Addressbook started DEV environment
+2022-05-26 14:35:55.717  INFO 4764 --- [restartedMain] c.e.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.3.1 on LAPTOP-3DLLB35C with PID 4764 (C:\Users\Asus\IdeaProjects\AddressBookApp\target\classes started by root in C:\Users\Asus\IdeaProjects\AddressBookApp)
+2022-05-26 14:35:55.717 DEBUG 4764 --- [restartedMain] c.e.a.AddressBookAppApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-26 14:35:55.717  INFO 4764 --- [restartedMain] c.e.a.AddressBookAppApplication          : The following 1 profile is active: "dev"
+2022-05-26 14:35:57.152  WARN 4764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 14:35:57.386  INFO 4764 --- [restartedMain] c.e.a.AddressBookAppApplication          : Started AddressBookAppApplication in 1.935 seconds (JVM running for 2.372)
+2022-05-26 14:35:57.386  INFO 4764 --- [restartedMain] c.e.a.AddressBookAppApplication          : Addressbook started DEV environment
