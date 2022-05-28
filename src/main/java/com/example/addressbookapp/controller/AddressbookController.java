@@ -19,7 +19,7 @@ public class AddressbookController {
     private IAddressbookService iAddressbookService;
 
     //get addressbook details
-    @RequestMapping("/get")
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
     public ResponseEntity<ResponseDTO> getAddressbookData(){
         List<AddressbookData> addressbookData =iAddressbookService.getAddressbookData();
         ResponseDTO responseDTO=new ResponseDTO("Get call Success",addressbookData);
@@ -38,7 +38,23 @@ public class AddressbookController {
     @GetMapping("city/{city}")
     public ResponseEntity<ResponseDTO> getAddressbookDataByCity(@PathVariable String city){
        List<AddressbookData> addressbookData=iAddressbookService.getAddressbookByCity(city);
-        ResponseDTO responseDTO=new ResponseDTO("Get call Success  for name successfull",addressbookData);
+        ResponseDTO responseDTO=new ResponseDTO("Get call Success  for city name successfull",addressbookData);
+        return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+    }
+
+    //sort addressbook by city names
+    @GetMapping("sort/{city}")
+    public ResponseEntity<ResponseDTO> getAddressbookSortByCity(@PathVariable String city){
+        List<AddressbookData> addressbookData=iAddressbookService.getAddressbookSortByCity(city);
+        ResponseDTO responseDTO=new ResponseDTO("Get call Success  for city name successfull",addressbookData);
+        return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+    }
+
+    //sort addressbook by state names
+    @GetMapping("sort1/{state}")
+    public ResponseEntity<ResponseDTO> getAddressbookSortByState(@PathVariable String state){
+        List<AddressbookData> addressbookData=iAddressbookService.getAddressbookSortByState(state);
+        ResponseDTO responseDTO=new ResponseDTO("Get call Success  for state name successfull",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 

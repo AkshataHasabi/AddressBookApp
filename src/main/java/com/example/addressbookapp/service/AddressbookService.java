@@ -6,6 +6,8 @@ import com.example.addressbookapp.exception.AddressbookException;
 import com.example.addressbookapp.repository.AddressbookRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -30,6 +32,17 @@ public class AddressbookService implements IAddressbookService {
     public List<AddressbookData> getAddressbookByCity(String city) {
         return addressbookRepository.findAddressbookDataByCity(city);
     }
+
+    @Override
+    public List<AddressbookData> getAddressbookSortByCity(String city) {
+        return addressbookRepository.findAll(Sort.by(Sort.Direction.ASC,city));
+    }
+
+    @Override
+    public List<AddressbookData> getAddressbookSortByState(String state) {
+        return addressbookRepository.findAll(Sort.by(Sort.Direction.ASC,state));
+    }
+
 
     @Override
     public AddressbookData createAddressbookData(AddressbookDTO addressbookDTO) {
