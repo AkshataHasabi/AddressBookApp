@@ -19,25 +19,25 @@ public class AddressbookController {
     private IAddressbookService iAddressbookService;
 
     //get addressbook details
-    @GetMapping( "/get/{token}")
-    public ResponseEntity<ResponseDTO> getAddressbookData(@PathVariable String token){
-        List<AddressbookData> addressbookData =iAddressbookService.getAddressbookData(token);
+    @GetMapping( "/get")
+    public ResponseEntity<ResponseDTO> getAddressbookData(){
+        List<AddressbookData> addressbookData =iAddressbookService.getAddressbookData();
         ResponseDTO responseDTO=new ResponseDTO("Get call Success",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 
     //get addressbook details by id
-    @GetMapping("/{token}")
-    public ResponseEntity<ResponseDTO> getAddressbookDataById(@PathVariable String token){
-        AddressbookData addressbookData=iAddressbookService.getAddressbookDataById(token);
+    @GetMapping("/{id}")
+    public ResponseEntity<ResponseDTO> getAddressbookDataById(@PathVariable int id){
+        AddressbookData addressbookData=iAddressbookService.getAddressbookDataById(id);
         ResponseDTO responseDTO=new ResponseDTO("Get call Success for id successfull",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 
     //get addressbook details by their cityname
-    @GetMapping("city/{token}")
-    public ResponseEntity<ResponseDTO> getAddressbookDataByCity(@PathVariable String token){
-       List<AddressbookData> addressbookData=iAddressbookService.getAddressbookByCity(token);
+    @GetMapping("city/{city}")
+    public ResponseEntity<ResponseDTO> getAddressbookDataByCity(@PathVariable String city){
+       List<AddressbookData> addressbookData=iAddressbookService.getAddressbookByCity(city);
         ResponseDTO responseDTO=new ResponseDTO("Get call Success  for city name successfull",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
@@ -67,17 +67,17 @@ public class AddressbookController {
     }
 
     //update addressbook details
-    @PutMapping("/update/{token}")
-    public ResponseEntity<ResponseDTO> updateAddressbookData(@PathVariable String token,@Valid @RequestBody AddressbookDTO addressbookDTO){
-        AddressbookData addressbookData=iAddressbookService.updateAddressbookData(token,addressbookDTO);
+    @PutMapping("/update/{id}")
+    public ResponseEntity<ResponseDTO> updateAddressbookData(@PathVariable int id,@Valid @RequestBody AddressbookDTO addressbookDTO){
+        AddressbookData addressbookData=iAddressbookService.updateAddressbookData(id,addressbookDTO);
         ResponseDTO responseDTO=new ResponseDTO("updated Addressbook data succesfully",addressbookData);
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 
     //delete addressbook details by id
-    @DeleteMapping("/{token}")
-    public ResponseEntity<ResponseDTO> deleteAddressbookData(@PathVariable String token){
-        ResponseDTO responseDTO=new ResponseDTO("deleted succesfully", iAddressbookService.deleteAddressbookData(token));
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ResponseDTO> deleteAddressbookData(@PathVariable int id){
+        ResponseDTO responseDTO=new ResponseDTO("deleted succesfully", iAddressbookService.deleteAddressbookData(id));
         return  new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
 

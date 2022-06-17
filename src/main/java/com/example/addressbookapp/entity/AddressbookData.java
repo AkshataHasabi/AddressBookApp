@@ -49,25 +49,6 @@ public class AddressbookData {
         this.zipCode = addressbookDTO.getZipCode();
         this.country=addressbookDTO.getCountry();
     }
-
-//    public void updateAddressbookData(AddressbookDTO addressbookDTO) {
-//        this.id = id;
-//        this.fName = addressbookDTO.getFName();
-//        this.lName = addressbookDTO.getLName();
-//        this.phoneNumber = addressbookDTO.getPhoneNumber();
-//        this.email = addressbookDTO.getEmail();
-//        this.address = addressbookDTO.getAddress();
-//        this.city = addressbookDTO.getCity();
-//        this.state = addressbookDTO.getState();
-//        this.zipCode = addressbookDTO.getZipCode();
-//        this.country=addressbookDTO.getCountry();
-//    }
-
-    public AddressbookData() {
+   public AddressbookData() {
     }
-
-//    public AddressbookData(AddressbookDTO addressbookDTO){
-//        this.updateAddressbookData(addressbookDTO);
-//    }
-
 }
